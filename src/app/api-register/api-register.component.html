@@ -1,0 +1,56 @@
+<html>
+    <body>
+        <style>
+           body {background-color: #800000;
+                 
+                }
+           h1{text-align: center;
+              color:white;}
+           .button1{
+            margin-left:300px;
+            background-color:gold;
+            color:white;
+           }
+           .button2{
+            margin-left:400px;
+            
+            color:gold;
+
+           }
+           .data1{
+            background-color:blue;
+            margin-left: 14px;
+           
+           }
+           .data2{
+            background-color:blue;
+            margin-left: 39px;
+           }
+           .data3{
+            background-color:blue;
+            margin-left: 11px;
+           }
+           .name{
+            margin-left: 150px;
+            }
+            div{
+                background-color: #008000;
+                margin-left: 500px;
+                margin-right: 500px
+            }
+        </style>
+        <br><br><br><br><br><br><br><br><br>
+        <div>
+        <h1>API-REGISTER FORM</h1>
+        <form>
+            <label for="username" class="name">USERNAME</label>
+            <input type="text"  class="data1" id="username" [(ngModel)]="username" name="username"><br><br>
+            <label for="email" class="name">E_MAIL</label>
+            <input type="email" class="data2" id="email" [(ngModel)]="email" name="email" ><br><br>
+            <label for="password" class="name">PASSWORD</label>
+            <input type="password" class="data3" id="password"  [(ngModel)]="password" name="password" ><br><br>
+            <button type="submit" class="button1" (click)="register()">register</button> 
+            <a type="submit" class="button2" (click)="login()" [routerLink]="['/api-login']">login</a> 
+
+    </form></div>    </body>
+</html>

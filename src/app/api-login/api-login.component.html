@@ -1,0 +1,52 @@
+<html>
+  <style>
+    body{
+      background-color: gold;
+                
+    }
+    h1{
+      text-align:center;
+      
+    }
+    .name{
+      margin-left: 100px;
+    }
+    .data1{
+      background-color:rgb(47, 99, 255);
+            margin-left: 39px;
+    }
+    .data2{
+      background-color:rgb(47, 99, 255);
+            margin-left: 11px;
+    }
+    .button{
+      margin-left: 220px;
+      background-color:rgb(47, 82, 255);
+      color:aliceblue;
+    }
+    .button2{
+         color:red;
+         margin-left:200px ;
+
+    }
+    div{
+      background-color: darkgreen;
+      margin-left:500px ;
+      margin-right:500px;
+    }
+  </style>
+    <body>
+      <br><br><br><br><br><br><br><br>
+      <div>
+      <h1>API-LOGIN FORM</h1><br><br><br> 
+      <form>
+        <label for="email" class="name">E_MAIL:</label>
+        <input type="email" class="data1" id="email" [(ngModel)]="email" name="email" ><br><br>
+        <label for="password" class="name">PASSWORD:</label>
+        <input type="password" class="data2" id="password" [(ngModel)]="password" name="password" ><br><br>
+        <button class="button" type="submit" (click)="submit()">login</button><br><br>
+        <a type="submit" class="button2" (click)="forget(email)" [routerLink]="['/forget-password']">forgot password</a>         
+<br><br>
+</form></div>
+    </body>
+</html>

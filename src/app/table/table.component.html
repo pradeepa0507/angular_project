@@ -1,0 +1,22 @@
+<html>
+    <body>
+        
+        <h2> register list</h2>
+        <table>
+            <tr>
+                <th>username</th>
+                <th>email</th>
+                <th>password</th>
+                <th>action</th>
+              </tr>
+              <tr *ngFor="let items of userData;let i=index;">
+            <td>{{items.username}}</td>
+            <td>{{items.email}}</td>
+            <td>{{items.password}}</td>
+            
+
+            <td><button type="button" (click)="edit(i)">edit</button><button type="button" (click)="delete(i)">delete</button></td>
+            </tr>
+        </table>
+    </body>
+</html>

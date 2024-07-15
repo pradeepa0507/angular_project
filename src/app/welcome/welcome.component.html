@@ -1,0 +1,20 @@
+<html>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        h1{
+            color:yellow;
+            text-align: center;
+        }
+        button{
+            background-color:yellow;
+        }
+    </style>
+    <body>
+        <h1>WELCOME TO OUR PROJECT!</h1>
+        <mat-icon  class="button" (click)="home()" color="blue">home</mat-icon><br>
+        <a type="submit" class="button" (click)="register()" [routerLink]="['/api-register']">register</a> <br>
+        <a type="submit" class="button" (click)="login()" [routerLink]="['/api-login']">login</a> 
+    </body>
+</html>

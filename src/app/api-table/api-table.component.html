@@ -1,0 +1,59 @@
+<html>
+    <body>
+        <style> .mat-blue {
+            color: #3f51b5;
+           }
+           .mat-red {
+            color: #b53f3f;
+           }
+           .mat-green {
+            color: #3fb566;
+           }
+           h2{
+            text-align: center;
+            color:#b53f3f
+           }
+           body{
+            background-color: rgb(176, 230, 200);
+         }
+         th{
+            background-color:rgb(64, 43, 226);
+         } 
+         table{
+            margin-right: 150px;
+            margin-left: 150px;
+
+         }
+         tr{
+            background-color:limegreen;
+           
+         }
+           </style>
+           <div>
+        <h2> API-register list</h2>
+        
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>username</th>
+                <th>email</th>
+                <th>password</th>
+                <th>image</th>
+                <th>action</th>
+              </tr>
+              <tr *ngFor="let items of users;let i=index;">
+            <td>{{i+1}}</td>
+            <td>{{items.username}}</td>
+            <td>{{items.email}}</td>
+            <td>{{items.password}}</td>
+            <td>{{items.image}}</td>
+
+            <td><mat-icon  (click)="edit(items.id)" color="blue">edit</mat-icon>
+            <mat-icon  (click)="delete(items.id)" color="red">delete</mat-icon>
+            <mat-icon  (click)="upload(items.id)"color="green">flip_to_front</mat-icon></td>
+             
+          
+        </tr>
+        </table></div>
+    </body>
+</html>

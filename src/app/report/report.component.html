@@ -1,0 +1,30 @@
+<form >
+<div class="form-group">
+    <div class="card">
+        <div class="card-body p-30">
+<label for="all_report">Select Reports</label>
+    <select name="all_report" id="all_report" class="form-control"
+    [(ngModel)]="selectedReport" (change)="get_rep()">
+<option value="null" dissabled selected> Select Reports </option>
+<option *ngFor="let item of all_report" value="{{item.all_reports}}">{{item.all_reports}}</option>
+</select>
+</div>  
+</div>
+</div>
+
+<div *ngIf="selectedReport == 'agent'">
+    <div class="form-group">
+        <label for="date">Select Date</label>
+        <input type="date" id="date" class="form-control" formControlName="date" />
+        <!-- <input type="date" id="date" class="form-control" formControlName="date"
+            value="${new Date().toISOString().split('T')[0]}" /> -->
+    </div>
+</div>
+<div *ngIf="selectedReport == 'agent'" >
+    <div>
+        <button type="submit" (click)="generate()">Generate Report</button>
+
+    </div>
+
+</div>
+</form>
